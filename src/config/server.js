@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import routesAPI from '../routes'
+import connect from './database'
 const app = express()
 
 // Middlewares
@@ -20,5 +21,5 @@ app.use('/', (req, res) => {
 })
 
 // Database
-
+connect()
 export default app
